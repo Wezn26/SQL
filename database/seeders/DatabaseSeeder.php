@@ -7,6 +7,7 @@ namespace Database\Seeders;
 use App\Models\Category;
 use App\Models\Customer;
 use App\Models\Employee;
+use App\Models\OrderDetails;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -19,7 +20,8 @@ class DatabaseSeeder extends Seeder
 
         //Customer::factory(100)->create();
         //Category::factory(10)->create();
-        Employee::factory(10)->create();
+        //Employee::factory(10)->create();
+        OrderDetails::factory(2155)->create();
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([
