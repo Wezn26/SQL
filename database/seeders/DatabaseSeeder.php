@@ -10,6 +10,7 @@ use App\Models\Employee;
 use App\Models\Order;
 use App\Models\OrderDetails;
 use App\Models\Product;
+use App\Models\Supplier;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -25,7 +26,8 @@ class DatabaseSeeder extends Seeder
         //Employee::factory(10)->create();
         //OrderDetails::factory(2155)->create();
         //Order::factory(830)->create();
-        Product::factory(77)->create();
+        //Product::factory(77)->create();
+        //Supplier::factory(29)->create();
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([
