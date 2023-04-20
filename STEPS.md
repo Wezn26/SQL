@@ -79,6 +79,19 @@ SELECT * FROM customers WHERE NOT Country = 'Rwanda'
 AND NOT Country ='Bulgaria';
 ```
 # STEP 23 MySQL ORDER BY Keyword
-```
+```SELECT * FROM customers ORDER BY Country;```
+
+# STEP 24
+```SELECT * FROM customers ORDER BY Country DESC;```
+# STEP 25
+
+```SELECT * FROM customers ORDER BY Country, CustomerName;```
+
+# STEP 26
+```SELECT * FROM customers ORDER BY Country ASC, CustomerName DESC;```
+# STEP 27 The MySQL INSERT INTO Statement
+
+
+
 
 
