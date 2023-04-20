@@ -90,6 +90,13 @@ AND NOT Country ='Bulgaria';
 # STEP 26
 ```SELECT * FROM customers ORDER BY Country ASC, CustomerName DESC;```
 # STEP 27 The MySQL INSERT INTO Statement
+```
+INSERT INTO customers 
+(CustomerName, ContactName, Address, City, PostalCode, Country)
+VALUES 
+('Cardinal','Tom B. Erichsen', 'Skagen 21','Stavanger','4006','Norway');
+```
+# STEP 28 MySQL NULL Values
 
 
 
