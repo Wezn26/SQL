@@ -60,3 +60,25 @@ WHERE City = 'Feestview' OR City = 'Welchview';
 ```
 
 # STEP 19
+```
+SELECT * FROM customers 
+WHERE Country = 'Rwanda' OR Country = 'Bulgaria';
+```
+
+# STEP 20
+```SELECT * FROM customers WHERE NOT Country = 'Rwanda';```
+
+# STEP 21
+```
+SELECT  * FROM customers WHERE Country = 'Bulgaria' 
+AND (City ='West Isaiah' OR City = 'Feestview');
+```
+# STEP 22
+```
+SELECT * FROM customers WHERE NOT Country = 'Rwanda' 
+AND NOT Country ='Bulgaria';
+```
+# STEP 23 MySQL ORDER BY Keyword
+```
+
+
