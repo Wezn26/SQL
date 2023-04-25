@@ -121,6 +121,8 @@ SET PostalCode = '0000'
 WHERE Country = 'Ukraine';
 ```
 # STEP 32 MySQL DELETE Statement
+```DELETE FROM customers WHERE CustomerName = 'Ellie Runte';```
+# STEP 33 
 
 
 
