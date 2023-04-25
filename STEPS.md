@@ -97,6 +97,30 @@ VALUES
 ('Cardinal','Tom B. Erichsen', 'Skagen 21','Stavanger','4006','Norway');
 ```
 # STEP 28 MySQL NULL Values
+```
+SELECT CustomerName, ContactName, Address 
+FROM customers
+WHERE Address IS NULL;
+```
+# STEP 29
+```
+SELECT CustomerName, ContactName, Address 
+FROM customers
+WHERE Address IS NOT NULL;
+```
+# STEP 30 MySQL UPDATE Statement
+```
+UPDATE customers
+SET ContactName = 'Alfred Schmidt', City = 'Nadi'
+WHERE CustomerID = 1;
+```
+# STEP 31
+```
+UPDATE customers
+SET PostalCode = '0000'
+WHERE Country = 'Ukraine';
+```
+# STEP 32 MySQL DELETE Statement
 
 
 
