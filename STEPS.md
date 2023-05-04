@@ -126,7 +126,14 @@ WHERE Country = 'Ukraine';
 ```SELECT * FROM customers LIMIT 3;```
 # STEP 34
 ```SELECT * FROM customers WHERE Country = 'Bulgaria' LIMIT 2;```
-# STEP 35
+# STEP 35 MySQL MIN() and MAX() Functions
+```SELECT MIN(Price) AS SmallestPrice FROM products;```
+# STEP 36
+```SELECT MAX(Price) AS LargestPrice FROM products;```
+# STEP 37 MySQL COUNT(), AVG() and SUM() Functions
+```SELECT COUNT(ProductID) FROM products;```
+# STEP 38 
+
 
 
 
