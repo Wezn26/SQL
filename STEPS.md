@@ -133,6 +133,10 @@ WHERE Country = 'Ukraine';
 # STEP 37 MySQL COUNT(), AVG() and SUM() Functions
 ```SELECT COUNT(ProductID) FROM products;```
 # STEP 38 
+```SELECT AVG(Price) FROM products;```
+# STEP 39
+```SELECT SUM(Quantity) FROM order_details;```
+# STEP 40 MySQL LIKE Operator
 
 
 
