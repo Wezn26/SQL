@@ -122,7 +122,12 @@ WHERE Country = 'Ukraine';
 ```
 # STEP 32 MySQL DELETE Statement
 ```DELETE FROM customers WHERE CustomerName = 'Ellie Runte';```
-# STEP 33 
+# STEP 33 MySQL LIMIT Clause
+```SELECT * FROM customers LIMIT 3;```
+# STEP 34
+```SELECT * FROM customers WHERE Country = 'Bulgaria' LIMIT 2;```
+# STEP 35
+
 
 
 
