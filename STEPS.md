@@ -137,6 +137,10 @@ WHERE Country = 'Ukraine';
 # STEP 39
 ```SELECT SUM(Quantity) FROM order_details;```
 # STEP 40 MySQL LIKE Operator
+```SELECT * FROM customers WHERE CustomerName LIKE 'a%';```
+# STEP 41
+```SELECT * FROM customers WHERE CustomerName LIKE '%a';```
+# STEP 42 
 
 
 
