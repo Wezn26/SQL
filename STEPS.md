@@ -136,11 +136,23 @@ WHERE Country = 'Ukraine';
 ```SELECT AVG(Price) FROM products;```
 # STEP 39
 ```SELECT SUM(Quantity) FROM order_details;```
-# STEP 40 MySQL LIKE Operator
+# STEP 40 MySQL LIKE Operator The following SQL statement selects all customers with a CustomerName starting with "a":
 ```SELECT * FROM customers WHERE CustomerName LIKE 'a%';```
-# STEP 41
+# STEP 41 The following SQL statement selects all customers with a CustomerName ending with "a":
 ```SELECT * FROM customers WHERE CustomerName LIKE '%a';```
-# STEP 42 
+# STEP 42 The following SQL statement selects all customers with a CustomerName that have "or" in any position:
+```SELECT * FROM customers WHERE CustomerName LIKE '%or%';```
+# STEP 43 The following SQL statement selects all customers with a CustomerName that have "r" in the second position:
+```SELECT * FROM customers WHERE CustomerName LIKE '_r%';```
+# STEP 44 The following SQL statement selects all customers with a CustomerName that starts with "a" and are at least 3 characters in length:
+```SELECT * FROM customers WHERE CustomerName LIKE 'a__%';```
+# STEP 45 The following SQL statement selects all customers with a ContactName that starts with "a" and ends with "s":
+```SELECT * FROM customers WHERE CustomerName LIKE 'a%s';```
+# STEP 46 The following SQL statement selects all customers with a CustomerName that does NOT start with "a":
+```SELECT * FROM customers WHERE CustomerName NOT LIKE 'a%';```
+# STEP 47 MySQL Wildcards
+
+
 
 
 
