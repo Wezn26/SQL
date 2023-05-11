@@ -160,9 +160,19 @@ WHERE Country = 'Ukraine';
 # STEP 50 The following SQL statement selects all customers with a City starting with "R", followed by any character, followed by "w", followed by any character, followed by "side": Roweside
 ```SELECT * FROM customers WHERE City LIKE 'R_w_side';```
 # STEP 51 MySQL IN Operator
-
-
-
+# The following SQL statement selects all customers that are located in "Bulgaria", "Rwanda" or "Moldova":
+```
+SELECT * FROM customers WHERE Country IN ('Bulgaria', 'Rwanda', 'Moldova');
+```
+# STEP 52  The following SQL statement selects all customers that are NOT located in "Bulgaria", "Rwanda" or "Moldova":
+```
+SELECT * FROM customers WHERE Country NOT IN ('Bulgaria', 'Rwanda', 'Moldova');
+```
+# STEP 53 The following SQL statement selects all customers that are from the same countries as the table suppliers:
+```
+SELECT * FROM customers WHERE Country IN (SELECT Country FROM suppliers);
+```
+# STEP 54 MySQL BETWEEN Operator
 
 
 
