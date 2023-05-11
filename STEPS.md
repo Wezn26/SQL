@@ -150,7 +150,16 @@ WHERE Country = 'Ukraine';
 ```SELECT * FROM customers WHERE CustomerName LIKE 'a%s';```
 # STEP 46 The following SQL statement selects all customers with a CustomerName that does NOT start with "a":
 ```SELECT * FROM customers WHERE CustomerName NOT LIKE 'a%';```
-# STEP 47 MySQL Wildcards
+# STEP 47 MySQL Wildcards 
+# The following SQL statement selects all customers with a City starting with "la":
+```SELECT * FROM customers WHERE City LIKE 'la%';```
+# STEP 48 The following SQL statement selects all customers with a City containing the pattern "es": 
+```SELECT * FROM customers WHERE City LIKE '%es%';```
+# STEP 49 The following SQL statement selects all customers with a City starting with any character, followed by "_adi":
+```SELECT * FROM customers WHERE City LIKE '_adi';```
+# STEP 50 The following SQL statement selects all customers with a City starting with "R", followed by any character, followed by "w", followed by any character, followed by "side": Roweside
+```SELECT * FROM customers WHERE City LIKE 'R_w_side';```
+# STEP 51 MySQL IN Operator
 
 
 
