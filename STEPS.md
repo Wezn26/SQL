@@ -173,6 +173,42 @@ SELECT * FROM customers WHERE Country NOT IN ('Bulgaria', 'Rwanda', 'Moldova');
 SELECT * FROM customers WHERE Country IN (SELECT Country FROM suppliers);
 ```
 # STEP 54 MySQL BETWEEN Operator
+## The following SQL statement selects all products with a price between 10 and 80:
+```
+SELECT * FROM products WHERE Price BETWEEN 10 AND 80;
+```
+# STEP 55 To display the products outside the range of the previous example, use NOT BETWEEN:
+```
+SELECT * FROM products WHERE Price NOT BETWEEN 10 AND 80;
+```
+# STEP 56 The following SQL statement selects all products with a price between 10 and 20. In addition; do not show products with a CategoryID of 1,2, or 3:
+```
+SELECT * FROM products WHERE Price BETWEEN 10 AND 80 AND CategoryID NOT IN (1,2,3);
+```
+# STEP 57 The following SQL statement selects all products with a ProductName between "Libero nesciunt quisquam" and "Voluptas enim libero eos":
+```
+SELECT * FROM products WHERE ProductName 
+BETWEEN 'Libero nesciunt quisquam' AND 'Voluptas enim libero eos'
+ORDER BY ProductName;
+```
+# STEP 58 The following SQL statement selects all products with a ProductName between "Corporis nulla et" and "Quia repellat":
+```
+SELECT * FROM products WHERE ProductName 
+BETWEEN 'Corporis nulla et' AND 'Quia repellat'
+ORDER BY ProductName;
+```
+# STEP 59 The following SQL statement selects all products with a ProductName not between "Carnarvon Tigers" and "Mozzarella di Giovanni":
+```
+SELECT * FROM products WHERE ProductName NOT
+BETWEEN 'Carnarvon Tigers' AND 'Mozzarella di Giovanni'
+ORDER BY ProductName;
+```
+# STEP 60 The following SQL statement selects all orders with an OrderDate between '01-July-1996' and '31-July-1996':
+```
+SELECT * FROM orders WHERE OrderDate BETWEEN '1996-07-01' AND '2011-07-01';
+```
+# STEP 61 MySQL Aliases
+
 
 
 
