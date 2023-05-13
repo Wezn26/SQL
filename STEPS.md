@@ -197,10 +197,10 @@ SELECT * FROM products WHERE ProductName
 BETWEEN 'Corporis nulla et' AND 'Quia repellat'
 ORDER BY ProductName;
 ```
-# STEP 59 The following SQL statement selects all products with a ProductName not between "Carnarvon Tigers" and "Mozzarella di Giovanni":
+# STEP 59 The following SQL statement selects all products with a ProductName not between "Nobis dolorem ab deleniti" and "Dolor sunt eos":
 ```
 SELECT * FROM products WHERE ProductName NOT
-BETWEEN 'Carnarvon Tigers' AND 'Mozzarella di Giovanni'
+BETWEEN 'Nobis dolorem ab deleniti' AND 'Dolor sunt eos'
 ORDER BY ProductName;
 ```
 # STEP 60 The following SQL statement selects all orders with an OrderDate between '01-July-1996' and '31-July-1996':
