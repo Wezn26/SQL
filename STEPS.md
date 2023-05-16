@@ -208,6 +208,31 @@ ORDER BY ProductName;
 SELECT * FROM orders WHERE OrderDate BETWEEN '1996-07-01' AND '2011-07-01';
 ```
 # STEP 61 MySQL Aliases
+## The following SQL statement creates two aliases, one for the CustomerID column and one for the CustomerName column:
+```
+SELECT CustomerID AS ID, CustomerName AS Customer FROM customers;
+```
+# STEP 62 The following SQL statement creates two aliases, one for the CustomerName column and one for the ContactName column. Note: Single or double quotation marks are required if the alias name contains spaces:
+```
+SELECT CustomerName AS Customer, ContactName AS "Contact Person" FROM customers;
+```
+# STEP 63 The following SQL statement creates an alias named "Address" that combine four columns (Address, PostalCode, City and Country):
+```
+SELECT CustomerName, CONCAT_WS(', ', Address, Postalcode, City, Country) AS Address FROM customers;
+```
+# STEP 64 The following SQL statement selects all the orders from the customer with CustomerID=4 (Around the Horn). We use the "Customers" and "Orders" tables, and give them the table aliases of "c" and "o" respectively (Here we use aliases to make the SQL shorter):
+```
+SELECT o.OrderID, o.OrderDate, c.CustomerName
+FROM customers AS c, Orders AS o
+WHERE c.CustomerName='Sharon Rice' AND c.CustomerID=o.CustomerID;
+```
+# STEP 65 The following SQL statement is the same as above, but without aliases:
+```
+SELECT Orders.OrderID, Orders.OrderDate, Customers.CustomerName
+FROM Customers, Orders
+WHERE Customers.CustomerName='Sharon Rice' AND Customers.CustomerID=Orders.CustomerID;
+```
+# STEP 66
 
 
 
