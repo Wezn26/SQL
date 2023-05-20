@@ -232,7 +232,28 @@ SELECT Orders.OrderID, Orders.OrderDate, Customers.CustomerName
 FROM Customers, Orders
 WHERE Customers.CustomerName='Sharon Rice' AND Customers.CustomerID=Orders.CustomerID;
 ```
-# STEP 66
+# STEP 66 MySQL Joins
+# Then, we can create the following SQL statement (that contains an INNER JOIN), that selects records that have matching values in both tables:
+```
+SELECT orders.OrderID, customers.CustomerName, orders.OrderDate
+FROM orders
+INNER JOIN customers ON orders.CustomerID=customers.CustomerID;
+```
+# STEP 67 Supported Types of Joins in MySQL
+- INNER JOIN: Returns records that have matching values in both tables
+- LEFT JOIN: Returns all records from the left table, and the matched records from the right table
+- RIGHT JOIN: Returns all records from the right table, and the matched records from the left table
+- CROSS JOIN: Returns all records from both tables
+# STEP 68
+<p>
+<!-- <image src="public/images/img_innerjoin.gif" alt="Текст с описанием картинки"> -->
+<img alt="MySQL INNER JOIN" height="145" src="public/images/img_innerjoin.gif" width="200">
+<img alt="MySQL LEFT JOIN" height="145" src="public/images/img_leftjoin.gif" width="200">
+<img alt="MySQL RIGHT JOIN" height="145" src="public/images/img_rightjoin.gif" width="200">
+<img alt="MySQL CROSS JOIN" height="145" src="public/images/img_crossjoin.png" width="200">
+</p>
+
+
 
 
 
