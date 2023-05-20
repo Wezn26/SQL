@@ -223,7 +223,7 @@ SELECT CustomerName, CONCAT_WS(', ', Address, Postalcode, City, Country) AS Addr
 # STEP 64 The following SQL statement selects all the orders from the customer with CustomerID=4 (Around the Horn). We use the "Customers" and "Orders" tables, and give them the table aliases of "c" and "o" respectively (Here we use aliases to make the SQL shorter):
 ```
 SELECT o.OrderID, o.OrderDate, c.CustomerName
-FROM customers AS c, Orders AS o
+FROM customers AS c, orders AS o
 WHERE c.CustomerName='Sharon Rice' AND c.CustomerID=o.CustomerID;
 ```
 # STEP 65 The following SQL statement is the same as above, but without aliases:
