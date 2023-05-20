@@ -245,6 +245,7 @@ INNER JOIN customers ON orders.CustomerID=customers.CustomerID;
 - RIGHT JOIN: Returns all records from the right table, and the matched records from the left table
 - CROSS JOIN: Returns all records from both tables
 # STEP 68
+
 <p>
 <!-- <image src="public/images/img_innerjoin.gif" alt="Текст с описанием картинки"> -->
 <img alt="MySQL INNER JOIN" height="145" src="public/images/img_innerjoin.gif" width="200">
@@ -252,6 +253,12 @@ INNER JOIN customers ON orders.CustomerID=customers.CustomerID;
 <img alt="MySQL RIGHT JOIN" height="145" src="public/images/img_rightjoin.gif" width="200">
 <img alt="MySQL CROSS JOIN" height="145" src="public/images/img_crossjoin.png" width="200">
 </p>
+
+# STEP 69 MySQL INNER JOIN Keyword
+<p style="text-align:center;">
+<img alt="MySQL INNER JOIN" height="145" src="public/images/img_innerjoin.gif" width="200">
+</p>
+
 
 
 
