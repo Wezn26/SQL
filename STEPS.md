@@ -255,9 +255,54 @@ INNER JOIN customers ON orders.CustomerID=customers.CustomerID;
 </p>
 
 # STEP 69 MySQL INNER JOIN Keyword
+### The INNER JOIN keyword selects records that have matching values in both tables.
 <p style="text-align:center;">
 <img alt="MySQL INNER JOIN" height="145" src="public/images/img_innerjoin.gif" width="200">
 </p>
+
+# STEP 70 The following SQL statement selects all orders with customer information:
+#### Note: The INNER JOIN keyword selects all rows from both tables as long as there is a match between the columns. If there are records in the "Orders" table that do not have matches in "Customers", these orders will not be shown!
+```
+SELECT Orders.OrderID, Customers.CustomerName
+FROM Orders
+INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID;
+```
+# STEP 71 JOIN Three Tables
+### The following SQL statement selects all orders with customer and shipper information:
+```
+SELECT orders.OrderID, customers.CustomerName, shippers.ShipperName
+FROM ((orders 
+INNER JOIN customers ON orders.CustomerID = customers.CustomerID)
+INNER JOIN shippers ON orders.ShipperID = shippers.ShipperID); 
+```
+# STEP 72 MySQL LEFT JOIN Keyword
+### The LEFT JOIN keyword returns all records from the left table (table1), and the matching records (if any) from the right table (table2).
+<p style="text-align:center;">
+<img alt="MySQL LEFT JOIN" height="145" src="public/images/img_leftjoin.gif" width="200">
+</p>
+
+# STEP 73 The following SQL statement will select all customers, and any orders they might have:
+```
+SELECT customers.CustomerName, orders.OrderID
+FROM customers
+LEFT JOIN orders ON customers.CustomerID = orders.CustomerID
+ORDER BY customers.CustomerName;
+```
+# STEP 74 MySQL RIGHT JOIN Keyword
+### The RIGHT JOIN keyword returns all records from the right table (table2), and the matching records (if any) from the left table (table1).
+<p style="text-align:center;">
+<img alt="MySQL RIGHT JOIN" height="145" src="public/images/img_rightjoin.gif" width="200">
+</p>
+
+# STEP 75 The following SQL statement will return all employees, and any orders they might have placed:
+### Note: The RIGHT JOIN keyword returns all records from the right table (Employees), even if there are no matches in the left table (Orders).
+```
+SELECT orders.OrderID, employees.LastName, employees.FirstName
+FROM orders
+RIGHT JOIN employees ON orders.EmployeeID = employees.EmployeeID
+ORDER BY orders.OrderID;
+```
+
 
 
 
