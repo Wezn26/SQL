@@ -302,7 +302,38 @@ FROM orders
 RIGHT JOIN employees ON orders.EmployeeID = employees.EmployeeID
 ORDER BY orders.OrderID;
 ```
+# STEP 76 MySQL CROSS JOIN Keyword
+### The CROSS JOIN keyword returns all records from both tables (table1 and table2).
+<p style="text-align:center;">
+<img alt="MySQL CROSS JOIN" height="145" src="public/images/img_crossjoin.png" width="200">
+</p>
 
+### Note: CROSS JOIN can potentially return very large result-sets!
+
+# STEP 77 The following SQL statement selects all customers, and all orders:
+```
+SELECT customers.CustomerName, orders.OrderID
+FROM customers
+CROSS JOIN orders;
+```
+### Note: The CROSS JOIN keyword returns all matching records from both tables whether the other table matches or not. So, if there are rows in "Customers" that do not have matches in "Orders", or if there are rows in "Orders" that do not have matches in "Customers", those rows will be listed as well.
+# STEP 78 If you add a WHERE clause (if table1 and table2 has a relationship), the CROSS JOIN will produce the same result as the INNER JOIN clause:
+```
+SELECT customers.CustomerName, orders.OrderID
+FROM customers
+CROSS JOIN orders
+WHERE customers.CustomerID = orders.CustomerID;
+```
+# STEP 79 MySQL Self Join
+### A self join is a regular join, but the table is joined with itself.
+# The following SQL statement matches customers that are from the same city:
+```
+SELECT A.CustomerName AS CustomerName1, B.CustomerName AS CustomerName2, A.City
+FROM customers A, customers B
+WHERE A.CustomerID <> B.CustomerID
+AND A.City = B.City
+ORDER BY A.City;
+```
 
 
 
