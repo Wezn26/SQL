@@ -334,6 +334,51 @@ WHERE A.CustomerID <> B.CustomerID
 AND A.City = B.City
 ORDER BY A.City;
 ```
+# STEP 80 MySQL UNION Operator
+### The UNION operator is used to combine the result-set of two or more SELECT statements.
+- Every SELECT statement within UNION must have the same number of columns
+- The columns must also have similar data types
+- The columns in every SELECT statement must also be in the same order
+
+### The UNION operator selects only distinct values by default. To allow duplicate values, use UNION ALL
+### Note: The column names in the result-set are usually equal to the column names in the first SELECT statement.
+# STEP 81 The following SQL statement returns the cities (only distinct values) from both the "Customers" and the "Suppliers" table:
+```
+SELECT City FROM customers
+UNION
+SELECT City FROM suppliers
+ORDER BY City;
+```
+### Note: If some customers or suppliers have the same city, each city will only be listed once, because UNION selects only distinct values. Use UNION ALL to also select duplicate values!
+# STEP 82 The following SQL statement returns the cities (duplicate values also) from both the "Customers" and the "Suppliers" table:
+```
+SELECT City FROM customers
+UNION ALL
+SELECT City FROM suppliers
+ORDER BY City;
+```
+# STEP 83 SQL UNION With WHERE
+### The following SQL statement returns the Bulgaria cities (only distinct values) from both the "Customers" and the "Suppliers" table:
+```
+SELECT City, Country FROM customers
+WHERE Country = 'Bulgaria'
+UNION
+SELECT City, Country FROM suppliers
+WHERE Country = 'Bulgaria'
+ORDER BY City;
+```
+# STEP 84 SQL UNION ALL With WHERE
+### The following SQL statement returns the Bulgaria cities (duplicate values also) from both the "Customers" and the "Suppliers" table:
+```
+SELECT City, Country FROM customers
+WHERE Country = 'Bulgaria'
+UNION ALL
+SELECT City, Country FROM suppliers
+WHERE Country = 'Bulgaria'
+ORDER BY City;
+```
+
+
 
 
 
