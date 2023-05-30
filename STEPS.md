@@ -403,6 +403,32 @@ FROM customers
 GROUP BY Country
 ORDER BY COUNT(CustomerID) DESC;
 ```
+# STEP 89 GROUP BY With JOIN Example
+### The following SQL statement lists the number of orders sent by each shipper:
+```
+SELECT shippers.ShipperName, COUNT(orders.OrderID) AS NumberOfOrders FROM orders
+LEFT JOIN shippers ON orders.ShipperID = shippers.ShipperID
+GROUP BY ShipperName;
+```
+# STEP 90 MySQL HAVING Clause
+### The HAVING clause was added to SQL because the WHERE keyword cannot be used with aggregate functions.
+# STEP 91 The following SQL statement lists the number of customers in each country. Only include countries with more than 1 customer:
+```
+SELECT COUNT(CustomerID), Country
+FROM customers
+GROUP BY Country
+HAVING COUNT(CustomerID) > 1;
+```
+# STEP 92 The following SQL statement lists the number of customers in each country, sorted high to low (Only include countries with more than 1 customer):
+```
+SELECT COUNT(CustomerID), Country
+FROM customers
+GROUP BY Country
+HAVING COUNT(CustomerID) > 1
+ORDER BY COUNT(CustomerID) DESC;
+```
+# STEP 93 The following SQL statement lists the employees that have registered more than 10 orders:
+
 
 
 
