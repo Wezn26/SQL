@@ -386,7 +386,23 @@ UNION
 SELECT 'Supplier', ContactName, City, Country
 FROM suppliers;
 ```
-# STEP 86 
+# STEP 86 MySQL GROUP BY Statement
+- The GROUP BY statement groups rows that have the same values into summary rows, like "find the number of customers in each country".
+- The GROUP BY statement is often used with aggregate functions (COUNT(), MAX(), MIN(), SUM(), AVG()) to group the result-set by one or more columns.
+# STEP 87 MySQL GROUP BY Examples
+### The following SQL statement lists the number of customers in each country:
+```
+SELECT COUNT(CustomerID), Country
+FROM customers
+GROUP BY Country;
+```
+# STEP 88 The following SQL statement lists the number of customers in each country, sorted high to low:
+```
+SELECT COUNT(CustomerID), Country
+FROM customers
+GROUP BY Country
+ORDER BY COUNT(CustomerID) DESC;
+```
 
 
 
