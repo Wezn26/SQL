@@ -377,6 +377,16 @@ SELECT City, Country FROM suppliers
 WHERE Country = 'Bulgaria'
 ORDER BY City;
 ```
+# STEP 85 Another UNION Example
+### The following SQL statement lists all customers and suppliers:
+```
+SELECT 'Customer' AS Type, ContactName, City, Country
+FROM customers
+UNION
+SELECT 'Supplier', ContactName, City, Country
+FROM suppliers;
+```
+# STEP 86 
 
 
 
