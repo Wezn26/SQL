@@ -19,7 +19,7 @@ class OrderFactory extends Factory
         return [            
             'CustomerID' => $this->faker->numberBetween(1, 99),
             'EmployeeID' => $this->faker->numberBetween(1, 9),
-            'OrderDate'  => $this->faker->date('d.m.Y'),
+            'OrderDate'  => $this->faker->date('Y.m.d'),
             'ShipperID'  => $this->faker->numberBetween(1, 3)
         ];
     }
