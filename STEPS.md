@@ -428,6 +428,22 @@ HAVING COUNT(CustomerID) > 1
 ORDER BY COUNT(CustomerID) DESC;
 ```
 # STEP 93 The following SQL statement lists the employees that have registered more than 10 orders:
+```
+SELECT employees.LastName, COUNT(orders.OrderID) AS NumberOfOrders
+FROM (orders
+INNER JOIN employees ON orders.EmployeeID = employees.EmployeeID)
+GROUP BY LastName
+HAVING COUNT(orders.OrderID) > 10;
+```
+# STEP 94 The following SQL statement lists if the employees "Dach" or "Tillman" have registered more than 25 orders:
+```
+SELECT employees.LastName, COUNT(orders.OrderID) AS NumberOfOrders
+FROM orders
+INNER JOIN employees ON orders.EmployeeID = employees.EmployeeID
+WHERE LastName = 'Dach' OR LastName = 'Tillman'
+GROUP BY LastName
+HAVING COUNT(orders.OrderID) > 25;
+```
 
 
 
