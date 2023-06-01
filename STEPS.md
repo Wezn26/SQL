@@ -444,6 +444,24 @@ WHERE LastName = 'Dach' OR LastName = 'Tillman'
 GROUP BY LastName
 HAVING COUNT(orders.OrderID) > 25;
 ```
+# STEP 95 MySQL EXISTS Operator
+- The EXISTS operator is used to test for the existence of any record in a subquery.
+- The EXISTS operator returns TRUE if the subquery returns one or more records.
+# STEP 96 The following SQL statement returns TRUE and lists the suppliers with a product price less than 50:
+```
+SELECT SupplierName
+FROM suppliers
+WHERE EXISTS (SELECT ProductName FROM products 
+WHERE products.SupplierID = suppliers.SupplierID AND Price < 50);
+```
+# STEP 97 The following SQL statement returns TRUE and lists the suppliers with a product price equal to 50:
+```
+SELECT SupplierName
+FROM suppliers
+WHERE EXISTS (SELECT ProductName FROM products 
+WHERE products.SupplierID = suppliers.SupplierID AND Price < 50);
+```
+# STEP 98 MySQL ANY and ALL Operators
 
 
 
