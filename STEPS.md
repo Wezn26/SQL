@@ -497,6 +497,36 @@ WHERE column_name operator ALL
   FROM table_name
   WHERE condition);
 ```
+# STEP 101 SQL ANY Examples
+### The following SQL statement lists the ProductName if it finds ANY records in the OrderDetails table has Quantity equal to 10 (this will return TRUE because the Quantity column has some values of 10):
+```
+SELECT ProductName 
+FROM products
+WHERE ProductID = ANY
+(SELECT ProductID
+ FROM order_details
+WHERE Quantity = 10);
+```
+# STEP 102 The following SQL statement lists the ProductName if it finds ANY records in the OrderDetails table has Quantity larger than 99 (this will return TRUE because the Quantity column has some values larger than 99):
+```
+SELECT ProductName
+FROM products
+WHERE ProductID = ANY
+(SELECT ProductID
+ FROM order_details
+WHERE Quantity > 99);
+```
+# STEP 103 The following SQL statement lists the ProductName if it finds ANY records in the OrderDetails table has Quantity larger than 1000 (this will return FALSE because the Quantity column has no values larger than 1000):
+```
+SELECT ProductName
+FROM products
+WHERE ProductID = ANY
+  (SELECT ProductID
+  FROM order_details
+  WHERE Quantity > 1000);
+```
+# STEP 104  
+
 
 
 
