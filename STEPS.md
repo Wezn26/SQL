@@ -525,7 +525,45 @@ WHERE ProductID = ANY
   FROM order_details
   WHERE Quantity > 1000);
 ```
-# STEP 104  
+# STEP 104  SQL ALL Examples
+- The following SQL statement lists ALL the product names:
+```
+SELECT ALL ProductName
+FROM products
+WHERE TRUE;
+```
+# STEP 105 MySQL INSERT INTO SELECT
+- The INSERT INTO SELECT statement copies data from one table and inserts it into another table.
+- The INSERT INTO SELECT statement requires that the data types in source and target tables matches.
+### Note: The existing records in the target table are unaffected.
+# STEP 106 INSERT INTO SELECT Syntax
+### Copy all columns from one table to another table:
+```
+INSERT INTO table2
+SELECT * FROM table1
+WHERE condition;
+```
+# STEP 107 Copy only some columns from one table into another table:
+```
+INSERT INTO table2 (column1, column2, column3, ...)
+SELECT column1, column2, column3, ...
+FROM table1
+WHERE condition;
+```
+# STEP 108 MySQL INSERT INTO SELECT Examples
+### The following SQL statement copies "Suppliers" into "Customers" (the columns that are not filled with data, will contain NULL):
+```
+INSERT INTO customers (CustomerName, City, Country)
+SELECT SupplierName, City, Country FROM suppliers;
+```
+# STEP 109 The following SQL statement copies "Suppliers" into "Customers" (fill all columns):
+```
+INSERT INTO customers (CustomerName, ContactName, Address, City, PostalCode, Country)
+SELECT SupplierName, ContactName, Address, City, PostalCode, Country FROM suppliers;
+```
+
+
+
 
 
 
