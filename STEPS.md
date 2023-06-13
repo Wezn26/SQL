@@ -576,6 +576,66 @@ CASE
 END;
 ```
 # STEP 112 The following SQL goes through conditions and returns a value when the first condition is met:
+```
+SELECT OrderID, Quantity,
+CASE
+	WHEN Quantity > 30 THEN 'The quantity is greater than 30'
+  WHEN Quantity = 30 THEN 'The quantity is 30'
+	ELSE 'The quantity is under 30'
+END AS Quantity
+FROM order_details;
+```
+# STEP 113 The following SQL will order the customers by City. However, if City is NULL, then order by Country:
+```
+SELECT CustomerName, City, Country
+FROM customers
+ORDER BY
+(CASE
+ WHEN City IS NULL THEN Country
+ ELSE City
+END); 
+```
+# STEP 114 SOME
+```
+SELECT * FROM products 
+WHERE Price > SOME (SELECT Price FROM products WHERE Price > 20);
+```
+# STEP 115 MySQL Database
+# STEP 116 MySQL CREATE DATABASE Statement
+```
+CREATE DATABASE testDB;
+```
+# STEP 117 MySQL DROP DATABASE Statement
+```
+DROP DATABASE testDB;
+```
+# STEP 118 MySQL CREATE TABLE Statement
+### The CREATE TABLE statement is used to create a new table in a database.
+### Syntax
+```
+CREATE TABLE table_name (
+    column1 datatype,
+    column2 datatype,
+    column3 datatype,
+   ....
+);
+```
+- The column parameters specify the names of the columns of the table.
+- The datatype parameter specifies the type of data the column can hold (e.g. varchar, integer, date, etc.).
+# STEP 119 The following example creates a table called "Persons" that contains five columns: PersonID, LastName, FirstName, Address, and City:
+```
+CREATE TABLE Persons (
+	PersonID int,
+  LastName varchar(255),
+  FirstName varchar(255),
+  Address varchar(255),
+  City varchar(255)
+);
+```
+- The PersonID column is of type int and will hold an integer.
+- The LastName, FirstName, Address, and City columns are of type varchar and will hold characters, and the maximum length for these fields is 255 characters.
+
+
 
 
 
