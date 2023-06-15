@@ -634,7 +634,46 @@ CREATE TABLE Persons (
 ```
 - The PersonID column is of type int and will hold an integer.
 - The LastName, FirstName, Address, and City columns are of type varchar and will hold characters, and the maximum length for these fields is 255 characters.
+ 
+# STEP 120 Create Table Using Another Table
+- A copy of an existing table can also be created using CREATE TABLE.
+- The new table gets the same column definitions. All columns or specific columns can be selected.
+- If you create a new table using an existing table, the new table will be filled with the existing values from the old table.
 
+### Syntax
+```
+CREATE TABLE new_table_name AS
+    SELECT column1, column2,...
+    FROM existing_table_name
+    WHERE ....;
+``` 
+# STEP 121 The following SQL creates a new table called "TestTables" (which is a copy of the "Customers" table): 
+```
+CREATE TABLE TestTable AS
+SELECT CustomerName, ContactName
+FROM customers;
+```
+# STEP 122 MySQL ALTER TABLE Statement
+- The ALTER TABLE statement is used to add, delete, or modify columns in an existing table.
+- The ALTER TABLE statement is also used to add and drop various constraints on an existing table.
+# STEP 123 ALTER TABLE - ADD Column
+### To add a column in a table, use the following syntax:
+```
+ALTER TABLE table_name
+ADD column_name datatype;
+```
+# STEP 124 The following SQL adds an "Email" column to the "Customers" table:
+```
+ALTER TABLE customers 
+ADD Email varchar(255);
+```
+# STEP 125 ALTER TABLE - DROP COLUMN
+### The following SQL deletes the "Email" column from the "Customers" table:
+```
+ALTER TABLE customers
+DROP COLUMN Email;
+```
+# STEP 126   
 
 
 
