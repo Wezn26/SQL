@@ -625,14 +625,14 @@ CREATE TABLE table_name (
 # STEP 119 The following example creates a table called "Persons" that contains five columns: PersonID, LastName, FirstName, Address, and City:
 ```
 CREATE TABLE Persons (
-	PersonID int,
-  LastName varchar(255),
-  FirstName varchar(255),
-  Address varchar(255),
-  City varchar(255)
+	ID INT PRIMARY KEY AUTO_INCREMENT,
+  LastName VARCHAR(255),
+  FirstName VARCHAR(255),
+  Address VARCHAR(255),
+  City VARCHAR(255)
 );
 ```
-- The PersonID column is of type int and will hold an integer.
+- The ID column is of type int and will hold an integer.
 - The LastName, FirstName, Address, and City columns are of type varchar and will hold characters, and the maximum length for these fields is 255 characters.
  
 # STEP 120 Create Table Using Another Table
