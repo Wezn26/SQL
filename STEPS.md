@@ -673,7 +673,24 @@ ADD Email varchar(255);
 ALTER TABLE customers
 DROP COLUMN Email;
 ```
-# STEP 126   
+# STEP 126 ADD VALUES IN TABLE Persons:
+```
+INSERT INTO Persons
+(LastName, FirstName, Address, City)
+VALUES
+('Hansen', 'Ola', 'Timoteivn-10', 'Sandnes');
+
+INSERT INTO Persons
+(LastName, FirstName, Address, City)
+VALUES
+('Svendson', 'Tove', 'Borgvn 23', 'Sandnes');
+
+INSERT INTO Persons
+(LastName, FirstName, Address, City)
+VALUES
+('Peterson', 'Kari', 'Storgt 20', 'Stavanger');
+```
+ 
 
 
 
