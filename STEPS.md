@@ -690,6 +690,54 @@ INSERT INTO Persons
 VALUES
 ('Peterson', 'Kari', 'Storgt 20', 'Stavanger');
 ```
+# STEP 127 ALTER TABLE - MODIFY COLUMN
+### To change the data type of a column in a table, use the following syntax:
+```
+ALTER TABLE table_name
+MODIFY COLUMN column_name datatype;
+```
+# STEP 128 Now we want to add a column named "DateOfBirth" in the "Persons" table.
+```
+ALTER TABLE Persons
+ADD DateOfBirth date;
+```
+# STEP 129 Change Data Type Example
+- Now we want to change the data type of the column named "DateOfBirth" in the "Persons" table.
+- We use the following SQL statement:
+```
+ALTER TABLE Persons 
+MODIFY COLUMN DateOfBirth year;
+```
+# STEP 130 DROP COLUMN Example
+```
+ALTER TABLE Persons
+DROP COLUMN DateOfBirth;
+```
+# STEP 131 MySQL Constraints
+- SQL constraints are used to specify rules for data in a table.
+### Create Constraints
+- Constraints can be specified when the table is created with the CREATE TABLE statement, or after the table is created with the ALTER TABLE statement.
+### Syntax:
+```
+CREATE TABLE table_name (
+    column1 datatype constraint,
+    column2 datatype constraint,
+    column3 datatype constraint,
+    ....
+);
+```
+- SQL constraints are used to specify rules for the data in a table.
+- Constraints are used to limit the type of data that can go into a table. This ensures the accuracy and reliability of the data in the table. If there is any violation between the constraint and the data action, the action is aborted
+- Constraints can be column level or table level. Column level constraints apply to a column, and table level constraints apply to the whole table.
+# The following constraints are commonly used in SQL:
+- NOT NULL - Ensures that a column cannot have a NULL value
+- UNIQUE - Ensures that all values in a column are different
+- PRIMARY KEY - A combination of a NOT NULL and UNIQUE. Uniquely identifies each row in a table
+- FOREIGN KEY - Prevents actions that would destroy links between tables
+- CHECK - Ensures that the values in a column satisfies a specific condition
+- DEFAULT - Sets a default value for a column if no value is specified
+- CREATE INDEX - Used to create and retrieve data from the database very quickly
+# STEP 132 
  
 
 
