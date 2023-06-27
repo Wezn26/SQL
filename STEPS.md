@@ -786,7 +786,75 @@ ADD CONSTRAINT UC_Person UNIQUE (ID,LastName);
 ALTER TABLE Persons
 DROP INDEX UC_Person;
 ```
- 
+# STEP 139 MySQL FOREIGN KEY Constraint
+- The FOREIGN KEY constraint is used to prevent actions that would destroy links between tables.
+- A FOREIGN KEY is a field (or collection of fields) in one table, that refers to the PRIMARY KEY in another table.
+- The table with the foreign key is called the child table, and the table with the primary key is called the referenced or parent table.
+# STEP 140 INSERT INTO TABLE Personal
+```
+INSERT INTO Personal 
+(LastName, FirstName, Age)
+VALUES
+('Hansen', 'Ola', '30');
+
+INSERT INTO Personal 
+(LastName, FirstName, Age)
+VALUES
+('Svendson', 'Tove', '23');
+
+INSERT INTO Personal 
+(LastName, FirstName, Age)
+VALUES
+('Pettersen', 'Kari', '20');
+```
+# STEP 141 DROP TABLE Personal AFTER CREATE TABLE Personal
+```
+CREATE TABLE Persons (
+  PersonID int PRIMARY KEY AUTO_INCREMENT,
+  LastName varchar(255),
+  FirstName varchar(255),
+  Age int
+);
+```
+# STEP 142 CREATE TABLE Orders
+### FIRST
+```
+CREATE TABLE Orders (
+    OrderID INT NOT NULL AUTO_INCREMENT,
+    OrderNumber INT NOT NULL,
+    PersonID INT,
+    PRIMARY KEY (OrderID),
+    CONSTRAINT FK_PersonOrder FOREIGN KEY (PersonID)
+    REFERENCES Personal(PersonID)
+);
+```
+### SECOND
+```
+CREATE TABLE Orders (
+    OrderID INT NOT NULL AUTO_INCREMENT,
+    OrderNumber INT NOT NULL,
+    PersonID INT,
+    PRIMARY KEY (OrderID),
+    FOREIGN KEY (PersonID) REFERENCES Personal(PersonID)
+);
+```
+# STEP 143 FOREIGN KEY on ALTER TABLE
+### To create a FOREIGN KEY constraint on the "PersonID" column when the "Orders" table is already created, use the following SQL:
+```
+ALTER TABLE Orders
+ADD FOREIGN KEY (PersonID) REFERENCES Persons(PersonID);
+```
+# STEP 144 To allow naming of a FOREIGN KEY constraint, and for defining a FOREIGN KEY constraint on multiple columns, use the following SQL syntax:
+```
+ALTER TABLE Orders
+ADD CONSTRAINT FK_PersonOrder
+FOREIGN KEY (PersonID) REFERENCES Persons(PersonID);
+```
+# STEP 145 DROP a FOREIGN KEY Constraint
+```
+ALTER TABLE Orders
+DROP FOREIGN KEY FK_PersonOrder;
+``` 
 
 
 
