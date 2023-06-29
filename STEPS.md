@@ -903,8 +903,40 @@ DROP CHECK CHK_PersonAge;
 ALTER TABLE Persons
 DROP CHECK CHK_PersonAge;
 ```
-# STEP 151 
-
+# STEP 151 MySQL DEFAULT Constraint
+- The DEFAULT constraint is used to set a default value for a column.
+- The default value will be added to all new records, if no other value is specified.
+# STEP 152 DEFAULT on CREATE TABLE
+### The following SQL sets a DEFAULT value for the "City" column when the "Persons" table is created:
+```
+CREATE TABLE Persons (
+  PersonID INT PRIMARY KEY AUTO_INCREMENT,
+  LastName VARCHAR(255),
+  FirstName VARCHAR(255),
+  Age INT,
+  City VARCHAR(255) DEFAULT 'Stavropol`
+);
+```
+### The DEFAULT constraint can also be used to insert system values, by using functions like CURRENT_DATE():
+```
+CREATE TABLE Orders (
+    ID INT NOT NULL,
+    OrderNumber INT NOT NULL,
+    OrderDate DATE DEFAULT CURRENT_DATE()
+);
+```
+# STEP 153 DEFAULT on ALTER TABLE
+### To create a DEFAULT constraint on the "City" column when the table is already created, use the following SQL:
+```
+ALTER TABLE Persons
+ALTER City SET DEFAULT 'Stavropol';
+```
+# STEP 154 DROP a DEFAULT Constraint
+```
+ALTER TABLE Persons
+ALTER City DROP DEFAULT;
+```
+# STEP 155 
 
 
 
