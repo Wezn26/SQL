@@ -898,15 +898,10 @@ ADD CONSTRAINT CHK_PersonAge CHECK (Age>=18 AND City='Sandnes');
 ALTER TABLE Persons
 DROP CHECK CHK_PersonAge;
 ```
-# STEP 150 DROP a CHECK Constraint
-```
-ALTER TABLE Persons
-DROP CHECK CHK_PersonAge;
-```
-# STEP 151 MySQL DEFAULT Constraint
+# STEP 150 MySQL DEFAULT Constraint
 - The DEFAULT constraint is used to set a default value for a column.
 - The default value will be added to all new records, if no other value is specified.
-# STEP 152 DEFAULT on CREATE TABLE
+# STEP 151 DEFAULT on CREATE TABLE
 ### The following SQL sets a DEFAULT value for the "City" column when the "Persons" table is created:
 ```
 CREATE TABLE Persons (
@@ -925,34 +920,34 @@ CREATE TABLE Orders (
     OrderDate DATE DEFAULT CURRENT_DATE()
 );
 ```
-# STEP 153 DEFAULT on ALTER TABLE
+# STEP 152 DEFAULT on ALTER TABLE
 ### To create a DEFAULT constraint on the "City" column when the table is already created, use the following SQL:
 ```
 ALTER TABLE Persons
 ALTER City SET DEFAULT 'Stavropol';
 ```
-# STEP 154 DROP a DEFAULT Constraint
+# STEP 153 DROP a DEFAULT Constraint
 ```
 ALTER TABLE Persons
 ALTER City DROP DEFAULT;
 ```
-# STEP 155 MySQL CREATE INDEX Statement
+# STEP 154 MySQL CREATE INDEX Statement
 - The CREATE INDEX statement is used to create indexes in tables.
 - Indexes are used to retrieve data from the database more quickly than otherwise. The users cannot see the indexes, they are just used to speed up searches/queries.
 ### Note: Updating a table with indexes takes more time than updating a table without (because the indexes also need an update). So, only create indexes on columns that will be frequently searched against.
-# STEP 156 CREATE INDEX Syntax
+# STEP 155 CREATE INDEX Syntax
 ### Creates an index on a table. Duplicate values are allowed:
 ```
 CREATE INDEX index_name
 ON table_name (column1, column2, ...);
 ```
-# STEP 157 CREATE UNIQUE INDEX Syntax
+# STEP 156 CREATE UNIQUE INDEX Syntax
 ### Creates a unique index on a table. Duplicate values are not allowed:
 ```
 CREATE UNIQUE INDEX index_name
 ON table_name (column1, column2, ...);
 ```
-# STEP 158 MySQL CREATE INDEX Example
+# STEP 157 MySQL CREATE INDEX Example
 ### The SQL statement below creates an index named "idx_lastname" on the "LastName" column in the "Personal" table:
 ```
 CREATE INDEX idx_lastname
@@ -963,12 +958,12 @@ ON Personal (LastName);
 CREATE INDEX idx_lastname
 ON Personal (LastName, FirstName);
 ```
-# STEP 159 DROP INDEX Statement
+# STEP 158 DROP INDEX Statement
 ```
 ALTER TABLE Personal 
 DROP INDEX idx_lastname;
 ```
-# STEP 160 
+# STEP 159 
 
 
 
