@@ -963,7 +963,16 @@ ON Personal (LastName, FirstName);
 ALTER TABLE Personal 
 DROP INDEX idx_lastname;
 ```
-# STEP 159 
+# STEP 159 MySQL AUTO INCREMENT Field
+- Auto-increment allows a unique number to be generated automatically when a new record is inserted into a table
+- Often this is the primary key field that we would like to be created automatically every time a new record is inserted
+
+# STEP 160 MySQL AUTO_INCREMENT Keyword
+- MySQL uses the AUTO_INCREMENT keyword to perform an auto-increment feature.
+- By default, the starting value for AUTO_INCREMENT is 1, and it will increment by 1 for each new record.
+
+# STEP 161 To let the AUTO_INCREMENT sequence start with another value, use the following SQL statement:
+
 
 
 
