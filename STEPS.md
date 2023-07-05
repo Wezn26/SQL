@@ -972,9 +972,58 @@ DROP INDEX idx_lastname;
 - By default, the starting value for AUTO_INCREMENT is 1, and it will increment by 1 for each new record.
 
 # STEP 161 To let the AUTO_INCREMENT sequence start with another value, use the following SQL statement:
-
-
-
+```ALTER TABLE Persons AUTO_INCREMENT=100;```
+# STEP 162 MySQL Views
+### MySQL CREATE VIEW Statement
+- In SQL, a view is a virtual table based on the result-set of an SQL statement.
+- A view contains rows and columns, just like a real table. The fields in a view are fields from one or more real tables in the database.
+- You can add SQL statements and functions to a view and present the data as if the data were coming from one single table.
+- A view is created with the CREATE VIEW statement.
+# STEP 163 CREATE VIEW Syntax
+```
+CREATE VIEW view_name AS
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition;
+```
+### Note: A view always shows up-to-date data! The database engine recreates the view, every time a user queries it.
+# STEP 164  MySQL CREATE VIEW Examples
+```
+CREATE VIEW MLD AS
+SELECT CustomerName, ContactName
+FROM customers
+WHERE Country = 'Moldova';
+```
+# STEP 165 We can query the view above as follows:
+```SELECT * FROM MLD;```
+# STEP 166 The following SQL creates a view that selects every product in the "products" table with a price higher than the average price:
+```
+CREATE VIEW Average_Price AS
+SELECT ProductName, Price
+FROM products
+WHERE Price > (SELECT AVG(Price) FROM products);
+```
+```SELECT * FROM Average_Price;```
+# STEP 167 MySQL Updating a View
+- A view can be updated with the CREATE OR REPLACE VIEW statement.
+# STEP 168 CREATE OR REPLACE VIEW Syntax
+```
+CREATE OR REPLACE VIEW view_name AS
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition;
+```
+# STEP 169 The following SQL adds the "City" column to the "MLD" view:
+```
+CREATE OR REPLACE VIEW MLD AS
+SELECT CustomerName, ContactName, City
+FROM customers
+WHERE Country = 'Moldova';
+```
+# STEP 170 MySQL Dropping a View
+```DROP VIEW MLD;```
+# STEP 171 SHOW FULL TABLES
+```SHOW FULL TABLES;```
 
 
 
